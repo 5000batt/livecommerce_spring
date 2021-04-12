@@ -22,7 +22,7 @@ public class BroadcastController {
 
 	}
 
-	// 방송조회
+	// 방송조회 test
 	@RequestMapping(value = "/broadcasts", method = RequestMethod.GET)
 	public List<Broadcast> getBroadcast() {
 		return broadcastRepo.findByState(true);
