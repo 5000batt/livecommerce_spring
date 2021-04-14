@@ -25,16 +25,15 @@ spring:
         order_updates: true
         jdbc: 
           batch_size: 5
-          
   rabbitmq:
     host: ec2-13-124-232-201.ap-northeast-2.compute.amazonaws.com
     username: rabbitmq
     password: password123
     
 eureka:
-  clinet:
+  client:
     service-url:
-      defalut-zone: http://192.168.0.24:8761/eureka/
+      default-zone: http://192.168.0.24:8761/eureka/
   instance:
     hostname: 192.168.0.24
     
@@ -45,7 +44,7 @@ api:
 spring:
   profiles: prod
   
-# nohup java -jar -Dspring.profiles.active=prod livecommerce-0.0.1-SNAPSHOT.jar >> livecommerce_manager.log &
+# nohup java -jar -Dspring.profiles.active=prod livecommerce-0.0.1-SNAPSHOT.jar >> livecommerce.log &
 
 eureka:
   client:
@@ -55,3 +54,6 @@ eureka:
   instance:
     # 본인 서비스의 ec2 주소
     hostname: 3.34.97.143
+    
+api:
+  base-path: https://a552eubt4h.execute-api.ap-northeast-2.amazonaws.com/v1/livecommerce
